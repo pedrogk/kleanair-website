@@ -1,0 +1,17 @@
+# Client wordmarks shown in the trusted-by row. Add `logo: images/acme.svg`
+# to an entry to render an image instead of the name.
+- name: Hog Slat
+  logo: images/logo-hogslat.png
+  link: https://hogslat.com
+- name: Portacool
+  logo: images/logo-portacool.png
+  link: https://portacool.com
+- name: Spirit Packaging
+  logo: images/logo-spirit.svg
+  link: https://www.spiritpackaging.com
+- name: Farmer Boy
+  logo: images/logo-farmerboy.png
+  link: https://farmerboyag.com
+- name: Dial Manufacturing
+  logo: images/logo-dial.svg
+  link: http://dialmfg.com

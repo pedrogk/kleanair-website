@@ -1,3 +1,179 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+
+baseURL = 'https://www.kleanair.com.mx'
+title = 'Klean Air'
+theme = 'kleanair'
+locale = 'en-US'
+defaultContentLanguage = 'en'
+timeZone = 'America/Monterrey'
+
+enableRobotsTXT = true
+summaryLength = 22
+capitalizeListTitles = false
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[minify]
+  minifyOutput = true
+
+[imaging]
+  quality = 78
+  resampleFilter = 'Lanczos'
+  hint = 'photo'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = false
+  [markup.highlight]
+    noClasses = false
+    lineNumbersInTable = false
+    tabWidth = 2
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[services]
+  [services.rss]
+    limit = 20
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+
+[[menu.main]]
+  name = 'Products'
+  pageRef = '/products'
+  weight = 20
+[[menu.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 30
+[[menu.main]]
+  name = 'Contact'
+  pageRef = '/contact'
+  weight = 50
+
+# Footer links are grouped by the `group` menu parameter.
+[[menu.footer]]
+  name = 'About us'
+  pageRef = '/about'
+  weight = 50
+  [menu.footer.params]
+    group = 'Company'
+[[menu.footer]]
+  name = 'Journal'
+  pageRef = '/blog'
+  weight = 70
+  [menu.footer.params]
+    group = 'Company'
+[[menu.footer]]
+  name = 'Contact'
+  pageRef = '/contact'
+  weight = 80
+  [menu.footer.params]
+    group = 'Company'
+
+[[menu.legal]]
+  name = 'Privacy'
+  pageRef = '/legal/privacy'
+  weight = 10
+[[menu.legal]]
+  name = 'Imprint'
+  pageRef = '/legal/imprint'
+  weight = 20
+
+# ---------------------------------------------------------------------------
+# Theme parameters
+# ---------------------------------------------------------------------------
+
+# Sub-tables such as [params.address] must come after every plain key in
+# [params]: in TOML a table header captures all following keys until the next
+# header, so a key written below [params.address] becomes params.address.<key>
+# and the theme never sees it.
+[params]
+  description = "We are a manufacturing company based in Torreon, Mexico specialized in the production of evaporative cooling media (cool cell pads) for agriculture, industrial and residential use."
+
+  # Company details. Nothing company-specific is hardcoded in the templates.
+  companyName = 'Klean Air'
+  legalName = 'Klean Air Sa de CV'
+  tagline = 'Excellence in evaporative cooling media.'
+  founded = 1998
+  email = 'info@kleanair.com.mx'
+  phone = '+52 871 721 4300'
+  phoneHref = '+528717214300'
+  vatId = 'KAI980525LVA'
+  openingHours = 'Monday to Friday, 09:00–18:00 CET'
+
+  # Brand. primaryColor drives the generated brand stylesheet; primaryColorDark
+  # is used when the dark scheme is active.
+  primaryColor = '#0f4c81'
+  primaryColorDark = '#8cc0ea'
+  radius = '0.5rem'
+  # Display face for headings, statistics and pull quotes. 'serif' uses the
+  # best serif already installed on the reader's system, which is what gives
+  # the theme its editorial feel at zero network cost. 'sans' opts out.
+  headingFont = 'serif'
+  logo = 'kleanair-logo-header.png'            # path under assets/, e.g. 'images/logo.svg'. Empty = wordmark.
+  logoDark = ''
+  favicon = '/favicon.svg'
+  appleTouchIcon = '/apple-touch-icon.png'
+  ogImage = 'images/og-default.png'      # the share card, same art as the repo's social preview
+
+  # Colour scheme: 'system', 'light' or 'dark'.
+  defaultScheme = 'system'
+  showSchemeToggle = true
+
+  showBreadcrumbs = false
+  showReadingTime = false
+  showRelated = true
+
+  [params.address]
+    street = 'Carretera a Mieleras Km 4.6'
+    postalCode = '27293'
+    city = 'Torreón'
+    region = 'Coahuila'
+    country = 'México'
+    countryCode = 'mx'
+    mapURL = 'https://maps.app.goo.gl/TZGPu976ATmLswXw6'
+
+
+  # Site-wide fallback for the closing call to action.
+  [params.cta]
+    eyebrow = 'Next step'
+    title = 'Tell us what you are building'
+    text = 'A 30 minute call is usually enough to tell whether we are the right studio for the problem. No pitch deck, no obligation.'
+    primaryLabel = 'Book an intro call'
+    primaryURL = '/contact/'
+    secondaryLabel = 'See our work'
+    secondaryURL = '/work/'
+
+  [params.navCTA]
+    enabled = false
+
+  [params.footer]
+    text = 'Your convenient option for high quality evaporative cooling media at a competitive price.'
+
+  [params.seo]
+    titleSeparator = '·'
+ 
+  # Leave both empty to ship zero third-party requests.
+  [params.analytics]
+    plausibleDomain = ''
+    googleAnalyticsID = ''
+
+  # Point action at Formspree, Netlify Forms or your own endpoint.
+  [params.contactForm]
+    action = ''
+    method = 'POST'
+    netlify = false
+    successMessage = 'Thanks — we reply to every enquiry within one working day.'
+
+  [[params.social]]
+    name = 'LinkedIn'
+    icon = 'linkedin'
+    url = 'https://www.linkedin.com/company/example'
+ 

@@ -1,0 +1,26 @@
+# `group` lets a page show a subset: {{< faq group="pricing" >}} or a faq
+# section with `group: pricing`.
+- group: general
+  question: Do you sell direcly to end users?
+  answer: >-
+    Our minimum engagement is for 30,000 ft3. Therefore, we mostly work through distributors.
+- group: general
+  question: Where are the products made?
+  answer: >-
+    We carefully build our products in our manufacturing facilities in Torreón, México.
+- group: general
+  question: Do your products have a warranty?
+  answer: >-
+    Yes, the length of the warranty depends on the specifications of the product (mainly the type 
+    of product and resin desired). If a products fails while in warranty, we will replace it without cost.
+- group: pricing
+  question: Why do you publish ranges instead of fixed prices?
+  answer: >-
+    Because scope decides cost. The ranges exist so you can tell within a minute
+    whether we are plausible for your budget. After a discovery sprint you get a
+    fixed price for the build.
+- group: process
+  question: Who owns the code and the designs?
+  answer: >-
+    You do, from the first commit. Repositories live in your organisation where
+    possible, and design files are transferred at the end of each phase.
